@@ -33,7 +33,7 @@ export interface Handshake {
   /**
    * The headers sent as part of the handshake
    */
-  headers: object;
+  headers: { [key: string]: any };
 
   /**
    * The date of creation (as string)
@@ -68,12 +68,12 @@ export interface Handshake {
   /**
    * The query object
    */
-  query: object;
+  query: { [key: string]: any };
 
   /**
    * The auth object
    */
-  auth: object;
+  auth: { [key: string]: any };
 }
 
 export class Socket extends EventEmitter {
